@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const GroupSchema = new Schema({
   createdAt: { type: Date, default: new Date() },
@@ -16,5 +16,4 @@ const GroupSchema = new Schema({
   updatedAt: { type: Date, default: new Date() },
 });
 
-module.exports = GroupSchema;
-
+module.exports = model('Group', GroupSchema);
